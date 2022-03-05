@@ -1,0 +1,91 @@
+$layout-breakpoint-large: 1920px;
+$layout-breakpoint-medium: 1440px;
+$layout-breakpoint-small: 960px;
+$layout-breakpoint-xsmall: 900px;
+
+  // .loader-inner {
+    .image-block {
+      position: absolute;
+      transform-origin: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.laoding-a {
+        width: 250px;
+        left: 15%;
+        bottom: 14%;
+        // z-index: 9;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          width: 200px;
+          left: 10%;
+          bottom: 24%;
+        }
+      }
+      &.laoding-b {
+        width: 300px;
+        top: 16%;
+        right: 5%;
+        // z-index: 11;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          width: 200px;
+          top: 26%;
+          right: 5%;
+        }
+      }
+      &.laoding-c {
+        width: 250px;
+        // max-width: 150px;
+        right: 15%;
+        bottom: 20%;
+        // z-index: 9;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          width: 200px;
+          right: 15%;
+          bottom: 10%;
+        }
+      }
+      &.laoding-d {
+        width: 300px;
+        left: 5%;
+        top: 25%;
+        // z-index: 11;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          width: 240px;
+          left: 5%;
+          top: 35%;
+        }
+      }
+      &.laoding-e {
+        width: 200px;
+        left: 40%;
+        top: 5%;
+        // z-index: 9;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          width: 100px;
+          left: 25%;
+          top: 10%;
+        }
+      }
+      
+      .row-title,
+      .row-letter {
+        font-size: 28rem;
+        font-weight: 500;
+        position: relative;
+        letter-spacing: -0.8rem;
+        display: inline-block;
+        white-space: nowrap;
+        @media (max-width: $layout-breakpoint-xsmall) {
+          width: 300px;
+          font-size: 13rem;
+        }
+      }
+      // img {
+      //   max-width: 100px;
+      //   width: 100%;
+      //   object-fit: fill;
+      // }
+      .default-image-width {
+        width: 100%;
+      }
+    }
