@@ -16,11 +16,10 @@ export default function Welcome({ providers }) {
   // const { data: session } = useSession();
   const router = useRouter();
   const { data: session } = useSession();
-  console.log(session)
   useEffect(() => { 
-    console.log(session)
     if (!session) {
-      router.push('/welcome')
+      // router.push('/welcome')
+      console.log('hi there')
     }else {
       router.push('/home')
     }

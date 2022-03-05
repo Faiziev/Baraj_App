@@ -154,14 +154,12 @@ const styles = stylex.create({
     userSelect: 'none',
     width: '100vw',
     position: 'fixed',
-    // height: '50px',
     overflow: 'hidden',
     backfaceVisibility: 'hidden',
   },
   container_footer_2: {
     content: 'default',
     width: '100wv',
-    // height: '50px',
     position: 'fixed',
     backfaceVisibility: 'hidden',
     overflow: 'hidden',
@@ -210,11 +208,13 @@ const styles = stylex.create({
     alignItems: 'flex-strat',
     justifyContent: 'flex-end',
     content: 'default',
+    position: 'fixed',
   },
   svg_border_div: {
     alignItems: 'center',
     justifyContent: 'center',
     content: 'default',
+    position: 'fixed',
   },
   svg_border: {
     marginTop: '2px',
@@ -236,8 +236,10 @@ const styles = stylex.create({
     // backgroundColor: '#ccc',
     position: 'absolute',
     bottom: '-10px',
+    zIndex: '9999'
   },
   ul: {
+    zIndex: '9999',
     width: '100%',
     height: '100%',
     display: 'flex',
