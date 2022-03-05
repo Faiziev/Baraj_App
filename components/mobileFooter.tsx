@@ -153,6 +153,7 @@ const styles = stylex.create({
     zIndex: '3',
     userSelect: 'none',
     width: '100vw',
+    position: 'fixed',
     // height: '50px',
     overflow: 'hidden',
     backfaceVisibility: 'hidden',
@@ -161,6 +162,7 @@ const styles = stylex.create({
     content: 'default',
     width: '100wv',
     // height: '50px',
+    position: 'fixed',
     backfaceVisibility: 'hidden',
     overflow: 'hidden',
     zIndex: '3',
@@ -190,7 +192,6 @@ const styles = stylex.create({
   container_footer_5: {
     content: 'default',
     overflowY: 'hidden',
-    MozBoxPack: 'justify',
     justifyContent: 'center',
     width: '100vw',
     height: '50px',

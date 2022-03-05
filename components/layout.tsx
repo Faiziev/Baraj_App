@@ -372,15 +372,15 @@ const styles = stylex.create({
     alignItems: 'center',
     zIndex: '3',
     userSelect: 'none',
+    position: 'fixed',
     width: '100vw',
-    // height: '50px',
     overflow: 'hidden',
     backfaceVisibility: 'hidden',
   },
   container_header_2: {
     content: 'default',
     width: '100wv',
-    // height: '50px',
+    position: 'fixed',
     backfaceVisibility: 'hidden',
     zIndex: '3',
   },
@@ -618,7 +618,7 @@ const styles = stylex.create({
     position: 'fixed',
     content: 'default',
     "@media (max-width: 750px)": {
-      width: '70% !important' ,
+      width: '60% !important' ,
     }
   },
   searchbox_container_2: {
