@@ -18,7 +18,6 @@ export default function Welcome({ providers }) {
   const { data: session } = useSession();
   useEffect(() => { 
     if (!session) {
-      // router.push('/welcome')
       console.log('hi there')
     }else {
       router.push('/home')
@@ -31,7 +30,12 @@ export default function Welcome({ providers }) {
   }, []);
   useEffect(() => {
     setTimeout(() => {
-      setshowing(false);
+      try {
+        setshowing(false);
+      }
+      catch ({message}) {
+        console.log(message)
+      }
     }, 5000);
   }, []);
 
