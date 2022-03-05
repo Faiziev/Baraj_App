@@ -13,13 +13,10 @@ export default function Welcome({ providers }) {
   const [loading, setLoading] = useState(true);
   const [showing, setshowing] = useState(true);
   
-  // const { data: session } = useSession();
   const router = useRouter();
   const { data: session } = useSession();
   useEffect(() => { 
-    if (!session) {
-      console.log('hi there')
-    }else {
+    if (session) {
       router.push('/home')
     }
   }, []);
@@ -97,7 +94,7 @@ export default function Welcome({ providers }) {
   const SignInComp = () => {
     return (
       <>
-        {!showing ? (
+        {!showing && 
           <motion.div 
             variants={container}
             initial="hidden"
@@ -106,7 +103,7 @@ export default function Welcome({ providers }) {
             className={stylex(styles.container_1)}>
             <motion.div className={stylex(styles.container_2)}>
               <motion.div className={stylex(styles.container_3)}>
-                {!loading && (
+                {!loading &&
                   <motion.div style={{opacity: '1'}} className={stylex(styles.logo_svg)}>
                     <motion.img 
                       layoutId="main-svg-1" 
@@ -115,7 +112,7 @@ export default function Welcome({ providers }) {
                       src={`/images/logo.png`}  
                       className={stylex(styles.svg)}/>
                   </motion.div>
-                )}
+                }
                 <motion.div className={stylex(styles.group_1)}>
                   <motion.div className={stylex(styles.signIn)}variants={item}>
                     Sign In
@@ -146,10 +143,7 @@ export default function Welcome({ providers }) {
               </motion.div>
             </motion.div>
           </motion.div>
-        ) : (
-          <>
-          </>
-        )}
+        }
       </>
     )
   }
