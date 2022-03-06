@@ -276,14 +276,10 @@ export default function Layout({ children }) {
                 :
                 <></>
                 }
-                {size.width < 750 && asPath !== '/auth/signin' && asPath !== '/welcome' && asPath !== '/' ?
-                  <MobilFooter />
-                :   
-                <>
-
-                </>
-                }
                 {children}
+                {size.width < 750 && asPath !== '/auth/signin' && asPath !== '/welcome' && asPath !== '/' &&
+                  <MobilFooter />
+                }
               </motion.div>
             </div>
         </div>

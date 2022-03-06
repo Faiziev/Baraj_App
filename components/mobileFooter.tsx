@@ -155,6 +155,7 @@ const styles = stylex.create({
     width: '100vw',
     position: 'fixed',
     overflow: 'hidden',
+    bottom: '0px important',
     backfaceVisibility: 'hidden',
   },
   container_footer_2: {
