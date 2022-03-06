@@ -185,22 +185,19 @@ const styles = stylex.create({
     display: 'flex',
     flexDirection: 'row',
     borderBottom: '1px solid var(--color-border-1)',
-    // background: 'var(--background)'
   },
   container_footer_5: {
-    content: 'default',
     overflowY: 'hidden',
     justifyContent: 'center',
     width: '100vw',
     height: '50px',
     position: 'absolute',
-    // bottom: '0px',
     paddingLeft: '12px',
     paddingRight: '12px',
     display: 'flex',
     flexDirection: 'row',
+    content: 'default',
     bordertop: '1px solid var(--color-border-1)',
-    // background: 'var(--background)'
   },
   group_container_1: {
     width: '100%',
@@ -249,10 +246,13 @@ const styles = stylex.create({
     justifyContent: 'space-between',
   },
   li_container_1:{
+    content: 'default',
   },
   li_container_2:{
+    content: 'default',
   },
   li_container_3:{
+    content: 'default',
   },
   li_container_svg:{
     position: 'relative',
@@ -320,10 +320,12 @@ const styles = stylex.create({
 
   post_btn_container_3: {
     content: 'default',
+    position: 'fixed',
   },
 
   post_btn_container_4: {
     content: 'default',
+    // position: 'fixed',
   },
   post_btn_container_svg: {
     position: 'relative',
