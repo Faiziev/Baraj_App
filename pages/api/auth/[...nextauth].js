@@ -9,6 +9,7 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
+  secret: "5a14b81d3045edc7339dab2f9a3ae4f2",
   pages: {
     signIn: "welcome",
   },
