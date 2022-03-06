@@ -8,7 +8,7 @@ const signIn = ({ providers }) => {
           <button onClick={() => SignIntoProvider(provider.id)}>
             Sign in with {provider.name}
           </button>
-        </div> 
+        </div>
       ))}
     </>
   )
