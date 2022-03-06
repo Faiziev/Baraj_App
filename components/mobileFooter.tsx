@@ -150,7 +150,7 @@ const styles = stylex.create({
     MozBoxFlex: '1',
     flexGrow: '1',
     alignItems: 'center',
-    zIndex: '3',
+    zIndex: '333',
     userSelect: 'none',
     width: '100vw',
     position: 'fixed',
@@ -164,7 +164,7 @@ const styles = stylex.create({
     position: 'fixed',
     backfaceVisibility: 'hidden',
     overflow: 'hidden',
-    zIndex: '3',
+    zIndex: '333',
   },
   container_footer_3: {
     content: 'default',
@@ -172,6 +172,7 @@ const styles = stylex.create({
     backfaceVisibility: 'hidden',
     bottom: '0px',
     position: 'fixed',
+    zIndex: '333',
     // justifyContent: 'flex-end'
   },
   container_footer_4: {
@@ -198,6 +199,7 @@ const styles = stylex.create({
     display: 'flex',
     flexDirection: 'row',
     content: 'default',
+    // @ts-ignore
     bordertop: '1px solid var(--color-border-1)',
   },
   group_container_1: {
