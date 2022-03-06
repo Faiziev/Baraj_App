@@ -177,8 +177,6 @@ const styles = stylex.create({
     width: '100%',
     position: 'absolute',
     content: 'default',
-    // top: '50%',
-    // left: '40%',
     paddingTop: '15%',
   },
   logo_svg: {
@@ -266,26 +264,3 @@ const styles = stylex.create({
     maxWidth: '300px',
   },
 })
-
-
-{/* // <motion.div className="loader">
-    //   <motion.div
-        variants={container}
-    //     onAnimationComplete={() => setLoading(false)}
-        initial="hidden"
-        animate="show"
-        exit="exit"
-    //     className="loader-inner"
-    //   >
-    //     <ImageBlock variants={item} id="laoding-e" />
-    //     <motion.div variants={itemMain} className="transition-image">
-    //       <img
-    //         layoutId="main-image-1"
-    //         src={`/images/laoding-a.jpg`}
-    //       />
-    //     </motion.div>
-    //     <ImageBlock variants={item} id="laoding-b" />
-    //     <ImageBlock variants={item} id="laoding-c" />
-    //     <ImageBlock variants={item} id="laoding-d" />
-    //   </motion.div>
-    // </motion.div> */}
