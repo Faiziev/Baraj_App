@@ -20,11 +20,11 @@ export default function Welcome({ providers }) {
       router.push('/home')
     }
   }, []);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 4000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
   useEffect(() => {
     setTimeout(() => {
       try {
