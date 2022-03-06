@@ -420,7 +420,7 @@ const styles = stylex.create({
   },
   main_cont_2: {
     width: '100%',
-    height: '100%',
+    height: '90%',
     alignItems: 'center',
     MozBoxAlign: 'center',
     justifyContent: 'center',

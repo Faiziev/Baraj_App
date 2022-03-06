@@ -67,8 +67,8 @@ export default function PostItem({ postID, ssrPosts }) {
     closed: { opacity: 1, x: "0px" },
   }
   // @ts-ignore
-  const sendComment = async (e) => {
-    e.preventDefault();
+  const sendComment = async (event) => {
+    event.preventDefault();
     try{
       const commentToSend = comment
       setComment('')
@@ -298,7 +298,7 @@ export default function PostItem({ postID, ssrPosts }) {
                               <Avatar src={posts.profileImg} css={{ size: "$17" }} />
                             </div>
                           </div>
-                          <div className={stylex(styles.postPage_groups_input_groups_2)}>
+                          <form className={stylex(styles.postPage_groups_input_groups_2)}>
                             <div className={stylex(styles.postPage_groups_input_input_1)}>
                               <div className={stylex(styles.postPage_groups_input_input_2)}>
                                 <div className={stylex(styles.postPage_groups_input_input_3)}>
@@ -307,7 +307,7 @@ export default function PostItem({ postID, ssrPosts }) {
                                       <div className={stylex(styles.searchbox_container_2)}>
                                           <div className={stylex(styles.searchbox_container_3)}>
                                             <div className={stylex(styles.searchbox_container_4)}>
-                                                <form className={stylex(styles.searchbox_container_5_form)} action="#" aria-label="Search" role="search" >
+                                                <div className={stylex(styles.searchbox_container_5_form)}>
                                                   <div className={stylex(styles.searchbox_container_6)}>
                                                     <div className={stylex(styles.searchbox_container_7)}>
                                                       <div className={stylex(styles.searchbox_container_8)}>
@@ -338,11 +338,11 @@ export default function PostItem({ postID, ssrPosts }) {
                                                       </div>
                                                     </div>
                                                   </div>
-                                                </form>
+                                                </div>
                                             </div>
                                           </div>
                                       </div>
-                                      <div className={stylex(styles.postPage_groups_input_btn_1)} aria-disabled="true" role="button" type='submit' disabled={!comment.trim()} onClick={sendComment}>
+                                      <div className={stylex(styles.postPage_groups_input_btn_1)} role="button" type='submit' disabled={!comment.trim()} onClick={sendComment}>
                                         <div className={stylex(styles.postPage_groups_input_btn_2)} dir="auto" >
                                           <span className={stylex(styles.span)}>
                                             <span className={stylex(styles.span)}>Reply</span>
@@ -354,7 +354,7 @@ export default function PostItem({ postID, ssrPosts }) {
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </form>
                         </div>
                       </div>
                     </div>

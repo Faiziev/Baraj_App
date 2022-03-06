@@ -9,7 +9,7 @@ import moment from "moment";
 import dynamic from 'next/dynamic'
 import RelatedPosts from "./realetedPost.tsx";
 import FotterComp from "./footer.tsx";
-import { collection, onSnapshot, query, orderBy, getDocs, where, doc, get } from "firebase/firestore";
+import { collection, onSnapshot, query, orderBy, addDoc, serverTimestamp, doc, get } from "firebase/firestore";
 import { Avatar } from '@nextui-org/react';
 import { db } from "../firebase";
 import { useSession } from "next-auth/react";
@@ -43,6 +43,7 @@ export const PostModal = ({}) => {
 
   useEffect(() => onSnapshot(query(doc(db, 'posts', postID)),(doc) => setPosts(doc.data())),[])
   useEffect(() => onSnapshot(query(collection(db, 'posts', postID, 'comments'), orderBy('timestamp', 'desc')), snapshot => setComments(snapshot.docs)), [db])
+  
   // @ts-ignore
   const sendComment = async (e) => {
     e.preventDefault();
@@ -104,7 +105,7 @@ export const PostModal = ({}) => {
           <div className={stylex(styles.modal_groups_g_2_comments_cont_2)}>
             <div className={stylex(styles.modal_groups_g_2_comments_g_1)}>
               <div className={stylex(styles.modal_groups_g_2_comments_avatar_cont)}>
-                <Avatar src={comments_prop.data().userImage} css={{ size: "$16" }}/>
+                <Avatar src={session?.userImage} css={{ size: "$16" }}/>
               </div>
             </div>
             <div className={stylex(styles.modal_groups_g_2_comments_g_2_header)}>
@@ -301,7 +302,7 @@ export const PostModal = ({}) => {
                                           <div className={stylex(styles.searchbox_container_2)}>
                                               <div className={stylex(styles.searchbox_container_3)}>
                                                 <div className={stylex(styles.searchbox_container_4)}>
-                                                    <form className={stylex(styles.searchbox_container_5_form)} action="#" aria-label="Search" role="search" >
+                                                    <form className={stylex(styles.searchbox_container_5_form)} action={sendComment} aria-label="comment" role="text" >
                                                       <div className={stylex(styles.searchbox_container_6)}>
                                                         <div className={stylex(styles.searchbox_container_7)}>
                                                           <div className={stylex(styles.searchbox_container_8)}>
@@ -336,7 +337,7 @@ export const PostModal = ({}) => {
                                                 </div>
                                               </div>
                                           </div>
-                                          <div className={stylex(styles.modal_groups_input_btn_1)} aria-disabled="true" role="button" type='submit' disabled={!comment.trim()} onClick={sendComment} >
+                                          <div className={stylex(styles.modal_groups_input_btn_1)} aria-disabled="true" role="button" type='submit' disabled={!comment.trim()} onClick={sendComment}>
                                             <div className={stylex(styles.modal_groups_input_btn_2)} dir="auto" >
                                               <span className={stylex(styles.span)}>
                                                 <span className={stylex(styles.span)}>Reply</span>
