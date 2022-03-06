@@ -118,14 +118,14 @@ export default function Welcome({ providers }) {
                     Sign In
                   </motion.div>
                   <motion.div className={stylex(styles.btn_1)} variants={item}>
-                    {Object.values(providers).map((provider) => (
+                    {/* {Object.values(providers).map((provider) => (
                       <motion.div className={stylex(styles.btn_2)} key={provider.name}>
                         <img src={`/images/glogo.png`}  className={stylex(styles.glogo)}/>
                         <motion.div type='button'className={stylex(styles.btn_title)} onClick={() => SignIntoProvider(provider.id)}>
                           Sign in with {provider.name}
                         </motion.div>
                       </motion.div>
-                    ))}
+                    ))} */}
                   </motion.div>
                   
                   <motion.div className={stylex(styles.title)} variants={item}>
