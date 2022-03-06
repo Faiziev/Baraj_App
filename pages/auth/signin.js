@@ -20,7 +20,7 @@ export async function getServerSideProps() {
   return {
     props: {
       providers,
-      secret: "5a14b81d3045edc7339dab2f9a3ae4f2",
+      secret: process.env.SECRET,
     },
   };
 }
